@@ -1,20 +1,26 @@
-# CalenTask
+# CalenTask (MVP)
 
-Calendar + Tasks unified app. One view, one app.
+Calendar + tasks in one day view, with drag-to-schedule.
 
-## Status
-🚧 MVP in development
+## Structure
+- `PLAN.md` — planning doc
+- `web/` — Next.js + Tailwind MVP
 
-## Features (planned)
-- Single view for calendar events + tasks
-- Drag tasks to schedule them
-- Google Calendar sync
-- AI auto-scheduling
-- Natural language input
+## Run locally
+```bash
+cd web
+npm install
+npm run dev
+```
+Then open <http://localhost:3000>.
 
-## Tech Stack
-- Next.js + TypeScript
-- Tailwind CSS
-- Supabase
-- Google Calendar API
-- OpenAI API
+## What works (current MVP)
+- Day timeline (8:00–20:00, 30-min slots)
+- Unscheduled tasks list
+- Drag task → drop onto a time slot to schedule it
+- LocalStorage persistence for tasks
+
+## Next steps
+- Google Calendar OAuth + read events (replace sample events)
+- Supabase persistence + auth
+- Natural language parsing + auto-schedule
